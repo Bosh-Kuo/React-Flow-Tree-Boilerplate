@@ -1,0 +1,26 @@
+- Normal Source:
+    - The target node connected from a Normal source cannot be a Normal node.
+    - A Normal source can have only one outgoing connection.
+    - The target node can only receive one incoming connection.
+    - When the connection is successfully made, the ID of the target node is added to the data.children of the source node.
+- Normal Target:
+    - The source node connecting to a Normal target can only be a Branch node.
+    - A Normal target can only receive one incoming connection.
+    - When the connection is successfully made, the ID of the target node is added to the data.children of the source node.
+- Normal Loop Target:
+    - The source node connecting to a Normal node can only be a Branch node.
+    - When the connection is successfully made, the target node is not added to the data.children of the source node.
+- Branch Source:
+    - The target node connected from a Branch source cannot be a Branch node.
+    - If the target node connected from a Branch source is not a Normal Loop Target, it can only receive one incoming connection.
+    - When the connection is successfully made, the ID of the target node is added to the data.children of the source node.
+- Branch Target:
+    - The source node connecting to a Branch target can only be a Normal node.
+    - The source node connecting to a Branch target can only have one outgoing connection.
+    - A Branch target can only receive one incoming connection.
+    - When the connection is successfully made, the ID of the target node is added to the data.children of the source node.
+- End Target:
+    - The source node connecting to a End target cannot be a End node.
+    - If the source node connecting to a End target is a Normal node, it can only have one outgoing connection.
+    - A End target can only receive one incoming connection.
+    - When the connection is successfully made, the ID of the target node is added to the data.children of the source node.
